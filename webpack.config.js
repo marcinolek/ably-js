@@ -27,7 +27,7 @@ const baseConfig = {
   module: {
     rules: [
       // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-      { test: /\.ts$/, loader: 'ts-loader' },
+      { test: /\.ts$/, loader: 'ts-loader', options: { transpileOnly: true} },
     ],
   },
   target: 'web',
@@ -138,10 +138,6 @@ const reactNativeConfig = {
   optimization: {
     minimize: false,
   },
-  ignoreWarnings: [
-    /warning from compiler/,
-    (warning) => true,
-  ],
 };
 
 const browserMinConfig = {
