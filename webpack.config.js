@@ -138,6 +138,10 @@ const reactNativeConfig = {
   optimization: {
     minimize: false,
   },
+  ignoreWarnings: [
+    /warning from compiler/,
+    (warning) => true,
+  ],
 };
 
 const browserMinConfig = {
